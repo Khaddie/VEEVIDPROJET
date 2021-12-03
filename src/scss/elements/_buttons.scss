@@ -5,6 +5,8 @@
     padding: pxToRem(16);
     font-size: $boutonFontSize + px;
     @include transition; 
+
+
     &:hover{ //Hover du principal
         @include button-secondary-base;
         color: $orange;

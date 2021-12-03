@@ -31,10 +31,12 @@ body{
         margin:pxToRem(18);
     }
 
-    a{
+    li>a{
         text-decoration: none;
         color:$gris;
     }
+
+    
 
     a:hover{
         color:$orange;
