@@ -1,0 +1,27 @@
+section{
+    font-family: $font;
+    ._SectionImage{
+      background-image: url("/src/assets/draw/pattern_1.jpg");
+      background-size: cover;
+      height: $section-h;
+    }
+      .__SectionTexte{
+        @include  small-up-section;  
+        
+    } 
+}
+@media screen and (max-width: $medium ) {
+    section{
+        font-family: $font;
+        ._SectionImage{
+          background-image: url("/src/assets/draw/pattern_2.jpg");
+          background-size: cover;
+          height: $section-h;
+        }
+          .__SectionTexte{
+            @include  small-up-section;  
+            
+        } 
+    }
+  }
+  
