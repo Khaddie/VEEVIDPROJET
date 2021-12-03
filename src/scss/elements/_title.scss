@@ -30,7 +30,11 @@
 
  &.-huge{
      font-size:pxToRem(80);
-     line-height:pxToRem(80);
+     line-height:pxToRem(70);
+
+&::before{
+    height:15px;
+    }
  }
 
 }
