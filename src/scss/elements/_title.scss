@@ -1,15 +1,38 @@
-.h1{
-    font-style:$font;
-    font-size:$h1FontSize;
+.title{
+    font-family:$font;
+    font-size:pxToRem(45);
+    line-height:pxToRem(45);
     color:$gris;
+    position: relative;
+    display: inline-block;
+    font-weight: 800;
+    span{
+        position:relative;
+        z-index:2;
+    }
 
- span{
+
+
+ &::before{
      content:"";
      width:100%;
      height:10px;
-     color:$bleuMain;
-    display: inline-block;
+     background-color:$bleuMain;
+     display: inline-block;
+     position: absolute;
+     bottom:0;
+     left:0;  
+ }
 
+ &.-tiny{
+    font-size:pxToRem(36);
+    line-height:pxToRem(36);
  }
 
 }
+
+ .titleh3{
+    font-family:$font;
+    font-size:pxToRem(26);
+    line-height:pxToRem(26);
+ }
