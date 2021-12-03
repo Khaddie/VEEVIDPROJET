@@ -12,7 +12,6 @@
     }
 
 
-
  &::before{
      content:"";
      width:100%;
@@ -36,3 +35,11 @@
     font-size:pxToRem(26);
     line-height:pxToRem(26);
  }
+
+ .body{
+    font-family:$font;
+    font-size:pxToRem(18);
+    line-height:pxToRem(18);
+ }
+
+
