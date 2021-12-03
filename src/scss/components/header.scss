@@ -1,44 +1,51 @@
-body{
-    margin-top:0;
+body {
+    margin-top: 0;
 }
-  
-.c-header{
 
+.c-header {
     background: no-repeat url(".././assets/draw/forme_header.svg");
     background-position: right bottom -35%;
     height: pxToRem(126);
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
 
-    &__logo{
-        margin-left:pxToRem(78);
-        width:286px;
-        height:59px;
+    &__logo {
+        margin-left: pxToRem(78);
+        width: 15%;
+        @include medium-up() {
+            width: 12%;
+            margin-left: pxToRem(20);
+        }
     }
 
-    &__list{
-        margin-right:pxToRem(78);
+    &__list {
+        margin-right: pxToRem(78);
         list-style: none;
-        display:flex;
-        font-size:pxToRem(18);
-        font-weight:bold; 
+        display: flex;
+        font-size: pxToRem(18);
+        font-weight: bold;
         justify-content: space-between;
-        align-items:center;
+        align-items: center;
+        @include medium-up() {
+            margin: 0.875rem;
+        }
     }
 
-    li{
-        margin:pxToRem(18);
+    li {
+        margin: pxToRem(18);
+
+        @include medium-up() {
+            margin: 0.7rem;
+        }
     }
 
-    li>a{
+    li > a {
         text-decoration: none;
-        color:$gris;
+        color: $gris;
     }
 
-    
-
-    a:hover{
-        color:$orange;
+    a:hover {
+        color: $orange;
     }
 }

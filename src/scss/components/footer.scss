@@ -1,0 +1,21 @@
+footer {
+    .footer {
+        margin: 10%;
+        display: flex;
+        justify-content: space-around;
+        ul {
+            padding: 0;
+            li:first-child {
+                font-weight: 800;
+                margin-top: 0px;
+            }
+
+            li {
+                list-style: none;
+            }
+        }
+        img {
+            width: 100px;
+        }
+    }
+}

@@ -125,3 +125,29 @@
         }
     }
 }
+
+// <----------------------LIEN TRAIT+TXT---------------------->//
+
+.link{
+    @include link-base;
+    color: $orange;
+    &:before{
+        @include link-trait-none;
+        @include transition;
+        background-color: $orange;
+        margin-right: pxToRem(2);
+    }
+    &:hover{
+        &:before{
+            width: pxToRem(20);
+            height: pxToRem(1);
+            @include transition;
+        }
+    }
+    &.-secondary{
+        color:$gris;
+        &:before{
+            background-color: $gris;
+        }
+    }
+}
