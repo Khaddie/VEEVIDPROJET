@@ -1,0 +1,36 @@
+@import "foundation/variable";
+@import "foundation/functions";
+@import "foundation/mixins";
+@import "objects/grid";
+
+html {
+    font-size: $rootFontSize + px;
+}
+h1 {
+    color: $color;
+    font-family: $font-tire;
+    @include title();
+    font-size: pxToRem(18);
+}
+p {
+    color: $color;
+    font-family: $font-texte;
+}
+list {
+    color: $color;
+    font-family: $font-texte;
+    font-size: pxTorem(18);
+}
+
+section {
+    article {
+        h2 {
+            color: $color;
+            @include small-up() {
+                color: rebeccapurple;
+            }
+        }
+    }
+}
+
+@import "components/products";

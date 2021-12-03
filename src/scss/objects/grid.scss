@@ -1,0 +1,14 @@
+@use "sass:math";
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@for $i from 1 through 12{
+    .col-#{$i}{
+        width: math.div($i,12)*100%;
+        }
+
+}
+//1/12*100%=8.333333 pr col-1
