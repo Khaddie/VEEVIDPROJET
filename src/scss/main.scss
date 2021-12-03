@@ -10,12 +10,12 @@ html {
     font-size: $rootFontSize + px;
 }
 h1 {
-    color: $color;
+    color: $gris;
     font-family: $h1FontSize;
     font-size: pxToRem(18);
 }
 p {
-    color: $color;
+    color: $gris;
     font-family: $bodyFontSize;
 }
 
