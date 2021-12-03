@@ -4,21 +4,23 @@
     @include button-base;
     padding: pxToRem(16);
     font-size: $boutonFontSize + px;
-    @include transition; 
-
-
+    @include transition;
+    @include button-a-main;
     &:hover{ //Hover du principal
         @include button-secondary-base;
         color: $orange;
         @include transition; 
+        @include button-a-hover;
     }
     &.-secondary{ //Secondaire
         @include button-secondary-base;
         color: $gris;
-        @include transition; 
+        @include transition;
+        @include button-a-second; 
         &:hover{ //Hover du secondaire
             color: $orange;
-            @include transition; 
+            @include transition;
+            @include button-a-hover; 
         }
     }
 }
@@ -29,7 +31,8 @@
     @include button-base;
     padding: pxToRem(16);
     font-size: $boutonFontSize + px;
-    @include transition; 
+    @include transition;
+    @include button-a-main;
     svg{
         @include ico-button;
         padding-right: pxToRem(8);
@@ -40,12 +43,14 @@
     &:hover{ //Hover
         @include button-secondary-base;
         @include ico-hover;
+        @include button-a-hover;
         @include transition; 
     }
     &.-secondary{ //Secondaire
         @include button-secondary-base;
         color: $gris;
-        @include transition; 
+        @include transition;
+        @include button-a-second;  
         svg{
             @include ico-button;
             padding-right: pxToRem(8);
@@ -56,7 +61,8 @@
         &:hover{ //Hover du secondaire
             @include button-secondary-base;
             @include ico-hover;
-            @include transition; 
+            @include transition;
+            @include button-a-hover; 
         }
     }
 }
@@ -67,7 +73,8 @@
     @include button-base;
     padding: pxToRem(18) 0 pxToRem(18) pxToRem(18); //haut,droite,bas,gauche
     font-size: $boutonHomeFontSize + px;
-    @include transition; 
+    @include transition;
+    @include button-a-main; 
     svg{
         width: pxToRem(48);
         height: pxToRem(24);
@@ -85,9 +92,10 @@
         @include ico-hover;
         padding: pxToRem(18);
         @include transition;
+        @include button-a-hover;
         svg{
             .barre{
-                transform: scaleX(2.5);
+                transform: scaleX(2.5); // par défaut : scaleX = 1
                 transition: transform 0.2s ease-in;
             }
             .pointe{
@@ -100,12 +108,14 @@
         @include button-secondary-base;
         @include transition; 
         color:$gris;
+        @include button-a-second; 
         svg{
             *{
                 fill: $gris;
             }
         }
         &:hover{
+            @include button-a-hover;
             color: $orange;
             svg{
                 *{
