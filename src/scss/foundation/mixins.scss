@@ -1,8 +1,3 @@
-@mixin title {
-    font-family: bold;
-    text-transform: uppercase;
-}
-
 @mixin small-up {
     @media all and (max-width: 768px) {
         @content;

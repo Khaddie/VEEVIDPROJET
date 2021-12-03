@@ -8,29 +8,15 @@ html {
 }
 h1 {
     color: $color;
-    font-family: $font-tire;
-    @include title();
+    font-family: $h1FontSize;
     font-size: pxToRem(18);
 }
 p {
     color: $color;
-    font-family: $font-texte;
+    font-family: $bodyFontSize;
 }
 list {
     color: $color;
-    font-family: $font-texte;
+    font-family: $bodyFontSize;
     font-size: pxTorem(18);
 }
-
-section {
-    article {
-        h2 {
-            color: $color;
-            @include small-up() {
-                color: rebeccapurple;
-            }
-        }
-    }
-}
-
-@import "components/products";
