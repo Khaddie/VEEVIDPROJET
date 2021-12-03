@@ -17,4 +17,7 @@
 .ico-button{
     @include button-base;
     font-size: $boutonFontSize + px;
+    img{
+        color:white;
+    }
 }
