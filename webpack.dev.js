@@ -76,6 +76,6 @@ module.exports = {
       },
       compress: true,
       //port du serveur
-      port: 9000
+      port: 8080
     }
 };
