@@ -1,23 +1,115 @@
-.button{
+// <----------------------BOUTON TXT---------------------->//
+
+.button-txt{ //Principal
     @include button-base;
+    padding: pxToRem(16);
     font-size: $boutonFontSize + px;
-    &:hover{
+    @include transition; 
+    &:hover{ //Hover du principal
         @include button-secondary-base;
         color: $orange;
+        @include transition; 
     }
-    &.-secondary{
+    &.-secondary{ //Secondaire
         @include button-secondary-base;
         color: $gris;
-        &:hover{
+        @include transition; 
+        &:hover{ //Hover du secondaire
             color: $orange;
+            @include transition; 
         }
     }
 }
 
-.ico-button{
+// <----------------------BOUTON ICONE+TXT ---------------------->//
+
+.button-ico-txt{ //Principal
     @include button-base;
+    padding: pxToRem(16);
     font-size: $boutonFontSize + px;
-    img{
-        color:white;
+    @include transition; 
+    svg{
+        @include ico-button;
+        padding-right: pxToRem(8);
+        path{
+            fill:white;
+        }
+    }
+    &:hover{ //Hover
+        @include button-secondary-base;
+        @include ico-hover;
+        @include transition; 
+    }
+    &.-secondary{ //Secondaire
+        @include button-secondary-base;
+        color: $gris;
+        @include transition; 
+        svg{
+            @include ico-button;
+            padding-right: pxToRem(8);
+            path{
+                fill: $gris;
+            }
+        }
+        &:hover{ //Hover du secondaire
+            @include button-secondary-base;
+            @include ico-hover;
+            @include transition; 
+        }
+    }
+}
+
+// <----------------------BOUTON TXT+FLECHE ---------------------->//
+
+.button-txt-arrow{
+    @include button-base;
+    padding: pxToRem(18) 0 pxToRem(18) pxToRem(18); //haut,droite,bas,gauche
+    font-size: $boutonHomeFontSize + px;
+    @include transition; 
+    svg{
+        width: pxToRem(48);
+        height: pxToRem(24);
+        padding-left: pxToRem(8);
+        display: inline-block;
+        vertical-align: middle;
+        *{ // * = tous les éléments
+            fill:white;
+            transform-origin: left center; //La flèche grandit en partant de la gauche (son origine)
+            @include transition;
+        }
+    }
+    &:hover{
+        @include button-secondary-base;
+        @include ico-hover;
+        padding: pxToRem(18);
+        @include transition;
+        svg{
+            .barre{
+                transform: scaleX(2.5);
+                transition: transform 0.2s ease-in;
+            }
+            .pointe{
+                transform: translateX(58%);
+                transition: transform 0.2s ease-in;
+            }
+        }
+    }
+    &.-secondary{
+        @include button-secondary-base;
+        @include transition; 
+        color:$gris;
+        svg{
+            *{
+                fill: $gris;
+            }
+        }
+        &:hover{
+            color: $orange;
+            svg{
+                *{
+                    fill: $orange;
+                }
+            }
+        }
     }
 }
