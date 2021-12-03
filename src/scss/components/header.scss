@@ -1,0 +1,42 @@
+body{
+    margin-top:0;
+}
+  
+.c-header{
+
+    background: no-repeat url(".././assets/draw/forme_header.svg");
+    background-position: right bottom -35%;
+    height: pxToRem(126);
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+
+    &__logo{
+        margin-left:pxToRem(78);
+        width:286px;
+        height:59px;
+    }
+
+    &__list{
+        margin-right:pxToRem(78);
+        list-style: none;
+        display:flex;
+        font-size:pxToRem(18);
+        font-weight:400px; 
+        justify-content: space-between;
+        align-items:center;
+    }
+
+    li{
+        margin:pxToRem(18);
+    }
+
+    a{
+        text-decoration: none;
+        color:$gris;
+    }
+
+    a:hover{
+        color:$orange;
+    }
+}

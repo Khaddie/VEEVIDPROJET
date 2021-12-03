@@ -1,6 +1,6 @@
 //FOUNDATION
-@import "foundation/variable";
 @import "foundation/functions";
+@import "foundation/variable";
 @import "foundation/mixins";
 
 // OBJECTS
@@ -9,7 +9,9 @@
 //ELEMENTS
 @import "elements/buttons";
 @import "elements/title";
-@import "elements/header";
+
+//COMPONENTS
+@import "components/header";
 
 
 html {
