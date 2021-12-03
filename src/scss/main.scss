@@ -6,6 +6,10 @@
 // OBJECTS
 @import "objects/grid";
 
+
+// ELEMENTS
+@import "elements/_title";
+
 html {
     font-size: $rootFontSize + px;
 }
