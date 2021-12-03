@@ -6,6 +6,10 @@
 // OBJECTS
 @import "objects/grid";
 
+//ELEMENTS
+@import "elements/buttons";
+@import "elements/title";
+
 html {
     font-size: $rootFontSize + px;
 }
@@ -19,6 +23,3 @@ p {
     font-family: $bodyFontSize;
 }
 
-.primary{
-    @include button-primary;
-}

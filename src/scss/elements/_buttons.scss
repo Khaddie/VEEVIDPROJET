@@ -1,0 +1,20 @@
+.button{
+    @include button-base;
+    font-size: $boutonFontSize + px;
+    &:hover{
+        @include button-secondary-base;
+        color: $orange;
+    }
+    &.-secondary{
+        @include button-secondary-base;
+        color: $gris;
+        &:hover{
+            color: $orange;
+        }
+    }
+}
+
+.ico-button{
+    @include button-base;
+    font-size: $boutonFontSize + px;
+}

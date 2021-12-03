@@ -27,11 +27,11 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/scss/pages/index.html'),
+      template: path.resolve(__dirname, '/src/pages/index.html'),
       filename : "index.html",
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/scss/pages/contact.html'),
+      template: path.resolve(__dirname, '/src/pages/contact.html'),
       filename : "contact.html",
     })
   ],
