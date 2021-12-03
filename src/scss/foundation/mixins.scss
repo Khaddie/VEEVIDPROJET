@@ -9,6 +9,9 @@
     background: $secondaire;
 }
 
+@mixin button-primary {
+    padding: pxToRem(20);
+}
 
 
 

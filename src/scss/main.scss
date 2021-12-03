@@ -18,8 +18,7 @@ p {
     color: $color;
     font-family: $bodyFontSize;
 }
-list {
-    color: $color;
-    font-family: $bodyFontSize;
-    font-size: pxTorem(18);
+
+.primary{
+    @include button-primary;
 }
