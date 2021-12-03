@@ -13,13 +13,3 @@
 html {
     font-size: $rootFontSize + px;
 }
-h1 {
-    color: $gris;
-    font-family: $h1FontSize;
-    font-size: pxToRem(18);
-}
-p {
-    color: $gris;
-    font-family: $bodyFontSize;
-}
-

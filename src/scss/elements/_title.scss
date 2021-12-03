@@ -1,0 +1,15 @@
+.h1{
+    font-style:$font;
+    font-size:$h1FontSize;
+    color:$gris;
+
+ span{
+     content:"";
+     width:100%;
+     height:10px;
+     color:$bleuMain;
+    display: inline-block;
+
+ }
+
+}
