@@ -42,7 +42,10 @@ section{
         padding: 10px 28px;
         line-height: 0.5;
         position: relative;
-        top: 20px;  
+        top: 20px;
+        ._SectionTexteCouleur{
+            color: $orange;
+        }  
     } 
     .__SectionImage{
         margin: auto;
