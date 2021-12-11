@@ -1,27 +1,61 @@
 section{
     font-family: $font;
+    font-size: $bodyFontSize;
     ._SectionImage{
-      background-image: url("/src/assets/draw/pattern_1.jpg");
+      display: flex;
+      background-image: url("/src/assets/draw/pattern.png");
       background-size: cover;
       height: $section-h;
+     
     }
-      .__SectionTexte{
+    ._SectionTexteImage{
+        width: 80%;
+        margin: auto;
+        display: flex;
+    } 
+    .__SectionTexte{
         @include  small-up-section;  
         
     } 
+    .__SectionImage{
+        background-image: url("/src/assets/draw/waves.png");
+        background-size: cover;
+        width: 100px;
+        height: 150px;
+        margin: 36px 150px; 
+        
+    }
 }
-@media screen and (max-width: $medium ) {
+@media screen and (max-width: $large) {
     section{
-        font-family: $font;
-        ._SectionImage{
-          background-image: url("/src/assets/draw/pattern_2.jpg");
-          background-size: cover;
-          height: $section-h;
-        }
-          .__SectionTexte{
-            @include  small-up-section;  
-            
-        } 
+    ._SectionTexteImage{
+        display: block;
+        width: 100%
+    } 
+    ._SectionImage{
+        height: 325px;
+        
+       
+    }
+    .__SectionTexte{
+        margin: auto;
+        padding: 10px 28px;
+        line-height: 0.5;
+        position: relative;
+        top: 20px;
+        ._SectionTexteCouleur{
+            color: $orange;
+        }  
+    } 
+    .__SectionImage{
+        margin: auto;
+        position: relative;
+        width: 60px;
+        height: 90px;
+        
+       
     }
   }
+    
+}
   
