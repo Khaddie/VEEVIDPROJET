@@ -187,8 +187,12 @@
     transform: translateY(-50%); // sert à centrer l'élément
     @include transition;
     @include button-a-main;
-    display: block; // l'élément prend une ligne entière
-    svg {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    svg{
         @include ico-button;
         display: block;
         margin-left: auto;
