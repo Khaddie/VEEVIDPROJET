@@ -1,15 +1,15 @@
-.title {
-   font-family: $font;
-   font-size: pxToRem(45);
-   line-height: pxToRem(45);
-   color: $gris;
-   position: relative;
-   display: inline-block;
-   font-weight: 800;
-   span {
-      position: relative;
-      z-index: 2;
-   }
+.title{
+    font-family:$font;
+    font-size: $h1FontSize;
+    line-height:pxToRem(45);
+    color:$gris;
+    position: relative;
+    display: inline-block;
+    font-weight: 800;
+    span{
+        position:relative;
+        z-index:2;
+    }
 
    &::before {
       content: "";
@@ -52,14 +52,14 @@
    }
 }
 
-.titleh3 {
-   font-family: $font;
-   font-size: pxToRem(26);
-   line-height: pxToRem(26);
-}
+ .titleh3{
+    font-family:$font;
+    font-size:$h3FontSize;
+    line-height:pxToRem(26);
+ }
 
-.body {
-   font-family: $font;
-   font-size: pxToRem(18);
-   line-height: pxToRem(18);
-}
+ .body{
+    font-family:$font;
+    font-size:$bodyFontSize;
+    line-height:pxToRem(18);
+ }

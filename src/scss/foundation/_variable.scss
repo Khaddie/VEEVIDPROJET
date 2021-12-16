@@ -1,21 +1,22 @@
 // BASE HTML
 
 $font: "Sen", sans-serif;
-$rootFontSize: 16;
+$rootFontSize: pxToRem(16);
 
 // PC
 
 $h1FontSize: pxToRem(45);
-$h2FontSize: 36;
-$h3FontSize: 26;
+$h2FontSize: pxToRem(36);
+$h3FontSize: pxToRem(26);
 
-$bodyFontSize: 18;
+$bodyFontSize: pxToRem(18);
 
-$boutonFontSize: 18;
-$boutonHomeFontSize : 22;
-$linkFontSize: 16;
+$boutonFontSize: pxToRem(18);
+$boutonHomeFontSize : pxToRem(22);
 
-$footerFontSize:14;
+$linkFontSize: pxToRem(18);
+
+$footerFontSize: pxToRem(14);
 
 // ORDI PORT
 
@@ -31,11 +32,11 @@ $linkFontSizeT: 14;
 
 // MOBILE
 
-$h1FontSizeM: 25;
-$h2FontSizeM: 20;
-$h3FotnSizeM: 18;
+$h1FontSizeM: pxToRem(25);
+$h2FontSizeM: pxToRem(20);
+$h3FotnSizeM: pxToRem(18);
 
-$bodyFontSizeM: 18;
+$bodyFontSizeM: pxToRem(18);
 
 $boutonFontSizeM: 18;
 $boutonHomeFontSizeM : 20;

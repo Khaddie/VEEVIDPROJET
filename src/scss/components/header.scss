@@ -9,6 +9,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include small-up {
+        display:none;
+    }
 
     &__logo {
         margin-left: pxToRem(78);
