@@ -1,13 +1,64 @@
 @use "sass:math";
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
+$maxColumns : 12;
+
+.container{
+    max-width: 1200px;
+    margin : 0 auto;
+
 }
 
-@for $i from 1 through 12 {
-    .col-#{$i} {
-        width: math.div($i, 12) * 100%;
+.row{
+    display : flex;
+    flex-wrap: wrap;
+    &.-center{
+      justify-content:center;
+    }
+    &.-center-step{
+        justify-content:center;
+        background-color: $beige;
+        margin: pxToRem(80) auto;
+      }
+    &.-vcenter{
+        align-items: center;
+    }
+
+}
+
+
+ 
+
+@for $i from 1 through $maxColumns{
+    .col-#{$i}{
+        flex-basis : calculate-width($i);
+        max-width: calculate-width($i);
+    }
+    
+}
+
+@include medium-up(){
+    @for $i from 1 through $maxColumns{
+        .col-md-#{$i}{
+            flex-basis : calculate-width($i);
+            max-width: calculate-width($i);
+        }
+       
     }
 }
-//1/12*100%=8.333333 pr col-1
+
+@include large-up(){
+    @for $i from 1 through $maxColumns{
+        .col-l-#{$i}{
+            flex-basis : calculate-width($i);
+            max-width: calculate-width($i);
+        }
+    }
+}
+@include x-large-up(){
+    @for $i from 1 through $maxColumns{
+        .col-xl-#{$i}{
+            flex-basis : calculate-width($i);
+            max-width: calculate-width($i);
+        }
+    }
+}
