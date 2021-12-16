@@ -31,15 +31,13 @@ footer {
             flex-direction: row;
             justify-content: center;
 
-            .trait {
+            /* .trait {
                 @include small-up {
                     height: 1px;
-                    width: 50%;
-                    margin: 12px auto;
-                    background-color: $orange;
+                   
                     display: block;
                 }
-            }
+            }*/
             ul:first-child {
                 margin-right: 3%;
             }
@@ -81,12 +79,14 @@ footer {
             .center {
                 @include small-up {
                     text-align: center;
+                    border-top: 0.1rem solid $orange;
+                    padding-top: pxToRem(15);
                 }
             }
         }
         &__infos {
             text-align: center;
-            font-size: pxToRem(14);
+            font-size: pxToRem(12);
 
             @include small-up {
                 font-size: pxToRem(8);

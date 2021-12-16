@@ -47,7 +47,9 @@
 
       &::before {
          height: 15px;
-         width: 50%;
+         width: 100%;
+         z-index: -1;
+         margin-bottom: pxToRem(10);
       }
    }
 }
