@@ -1,0 +1,22 @@
+.c-step{
+    padding: pxToRem(24);
+    text-align: center;
+    &__number{
+        font-size: pxToRem(24);
+        font-weight: 800;
+        width: 100px;
+        height: auto;
+        line-height: 100px;
+        margin: 0 auto;
+        background-image: url(../assets/draw/flower-empty.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    &__text{
+        max-width: 230px;
+        line-height: pxToRem(24);
+        margin: 0 auto;
+        padding-top: 16px;
+        font-size: $bodyFontSize + px;
+    }
+}
