@@ -31,8 +31,12 @@ module.exports = {
       filename : "index.html",
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/pages/contact.html'),
-      filename : "contact.html",
+      template: path.resolve(__dirname, './src/pages/compte.html'),
+      filename : "compte.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, './src/pages/custom.html'),
+      filename : "custom.html",
     })
   ],
   // Liste des règles à suivre par webpack
