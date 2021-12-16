@@ -170,3 +170,121 @@
         }
     }
 }
+
+// <----------------------Bouton fixe---------------------->//
+
+.button-fixed{
+    border-radius: 30px 0 0 0;
+    color: white;
+    font-family: $font;
+    border: solid 1px $orange;
+    background-color: $orange;
+    padding: pxToRem(16);
+    font-size: $boutonFontSize + px;
+    position: fixed; // le bouton sera fixe au scroll
+    top:50%;
+    right: 0;
+    transform: translateY(-50%); // sert à centrer l'élément
+    @include transition;
+    @include button-a-main;
+    display: block; // l'élément prend une ligne entière
+    svg{
+        @include ico-button;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: pxToRem(8);
+        path{
+            fill:white;
+        }
+    }
+    a{
+        display: block;
+    }
+    &:hover{
+        @include button-secondary-base;
+        color: $orange;
+        @include transition; 
+        @include button-a-hover;
+        @include ico-hover;
+    }
+}
+//////////////////////////////////////
+///////////// RESPONSIVE /////////////
+//////////////////////////////////////
+
+@media screen and (max-width: 1280px) { /* Règles CSS pour les écrans portables ici */
+    .button-txt{
+        font-size: $boutonFontSizeOP + px;
+    }
+
+    .button-ico-txt{
+        font-size: $boutonFontSizeOP + px;
+    }
+
+    .button-txt-arrow{
+        font-size: $boutonHomeFontSizeOP + px;
+    }
+
+    .button-fixed{
+        font-size: $boutonFontSizeOP + px;
+    }
+
+    .link{
+        font-size: $linkFontSizeOP + px;
+    }
+}
+
+@media screen and (max-width: 768px) { /* Règles CSS pour les tablettes ici */
+    .button-txt{
+        font-size: $boutonFontSizeT + px;
+        padding: pxToRem(14);
+    }
+
+    .button-ico-txt{
+        font-size: $boutonFontSizeT + px;
+        padding: pxToRem(14);
+    }
+
+    .button-txt-arrow{
+        font-size: $boutonHomeFontSizeT + px;
+        padding: pxToRem(16) 0 pxToRem(16) pxToRem(16);
+    }
+
+    .button-fixed{
+        font-size: $boutonFontSizeT + px;
+        padding: pxToRem(14);
+    }
+
+    .link{
+        font-size: $linkFontSizeT + px;
+    }
+}
+
+@media all and (max-device-width: 480px) /* Règles CSS pour les mobiles ici */
+{
+    .button-txt{
+        font-size: $boutonFontSizeM + px;
+        padding: pxToRem(16);
+    }
+
+    .button-ico-txt{
+        font-size: $boutonFontSizeM + px;
+        padding: pxToRem(16);
+    }
+
+    .button-txt-arrow{
+        font-size: $boutonHomeFontSizeM + px;
+        padding: pxToRem(18) 0 pxToRem(18) pxToRem(18);
+    }
+
+    .button-fixed{
+        font-size: $boutonFontSizeM + px;
+        padding: pxToRem(16);
+    }
+
+    .link{
+        font-size: $linkFontSizeM + px;
+    }
+}
+
