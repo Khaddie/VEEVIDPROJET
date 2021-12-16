@@ -14,13 +14,20 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/index.html'),
+      template: path.resolve(__dirname, './src/pages/index.html'),
       filename : "index.html",
       minify: true
     }),
+
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/contact.html'),
-      filename : "contact.html",
+      template: path.resolve(__dirname, './src/pages/compte.html'),
+      filename : "compte.html",
+      minify: true
+    }),
+
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, './src/pages/custom.html'),
+      filename : "custom.html",
       minify: true
     }),
   ],

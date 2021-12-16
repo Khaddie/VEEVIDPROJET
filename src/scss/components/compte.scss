@@ -1,0 +1,157 @@
+._compteRow{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    
+    ._compteCol{
+        padding: 20px;
+    &:nth-of-type(1){
+        width: 25%;
+    }
+    &:nth-of-type(2){
+        width: 50%;
+    }
+    .slider{
+        >div{
+        display: none;
+        }
+        .courant {
+        display: block;
+       ._compteAccueil{
+           display: flex;
+           justify-content: space-between;
+        }
+        ._compteInfo{
+            display: flex;
+            padding: 5px;
+           ._compteInfoCol{
+               width: 100%;
+               padding: 5px;
+               div{
+                   border: 1px solid #ff5f00;
+                   border-radius: 30px;
+                   height: 35px;
+                   span{
+                    position: absolute;
+                    padding: 6px;
+                    
+                   }
+               }
+            }
+           
+        }
+        .___compteInfo{
+            display: flex;
+            padding: 5px;
+            width: 60%;
+           ._compteInfoCol{
+               width: 100%;
+               padding: 5px;
+               div{
+                   border: 1px solid #ff5f00;
+                   border-radius: 30px;
+                   height: 35px;
+                   span{
+                    position: absolute;
+                    padding: 6px;
+                    
+                   }
+               }
+            }
+           
+        }
+        .__compteInfo{
+            padding: 5px;
+            div{
+                border: 1px solid #ff5f00;
+                border-radius: 30px;
+                height: 35px;
+                span{
+                 position: absolute;
+                 padding: 6px;
+                 
+                }
+            }
+
+        }
+
+    }
+}
+      
+    ._compteElement{
+    border: 3px solid $orange;
+    border-radius: 30px 0px;
+    
+    li{
+        padding: 20px;
+        list-style: none;
+        text-decoration: none;
+        border-bottom: 1px solid $orange;
+        text-align: center;
+        &:nth-of-type(7){
+            border-bottom: none;
+            } 
+        a{
+            text-decoration: none;
+            color: $orange;
+        }
+        &:hover{ 
+            background-color: $orange;
+            color: #FFF;
+            &:nth-of-type(1){
+                border-radius: 30px 0px 0px;
+            } 
+            &:nth-of-type(7){
+            border-radius:  0px 0px 30px;
+            } 
+        }
+        &:active{ 
+            background-color: $orange;
+           
+        }
+        a:hover{ 
+            background-color: $orange;
+            color: #FFF;
+
+        }
+      }  
+    }
+  }
+  ._compteAdresse{
+    display: flex;
+    justify-content: space-between;
+ }
+ .__compteFavoris{
+    display: flex;
+    
+    
+    div{
+    border: 1px solid $bleuMain;
+    box-sizing: border-box;
+    border-radius: 0px 50px;
+    margin: 10px;
+    span{    
+    position: absolute;
+    margin: 4px;    
+    }
+    img{
+    width: 200px;
+    height: 160px;
+   }
+   .__compteFavorisHeart{
+       img{
+           width: 20px;
+           height: auto;
+           float: right;
+           margin: 5px;
+           
+       }
+   }
+
+  }
+ 
+ }
+}
+
+
