@@ -1,0 +1,26 @@
+//PAGE ACCUEIL PARTIE SUPERIEURE//
+
+.c-presentation {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    margin-left: 5%;
+    &__shoes {
+        img {
+            width: 95%;
+            align-self: center;
+        }
+    }
+    &__texte {
+        line-height: 150%;
+        align-self: center;
+        flex-wrap: wrap;
+        margin-left: 5%;
+    }
+    &__button {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+}

@@ -1,54 +1,65 @@
-.title{
-    font-family:$font;
-    font-size:pxToRem(45);
-    line-height:pxToRem(45);
-    color:$gris;
-    position: relative;
-    display: inline-block;
-    font-weight: 800;
-    span{
-        position:relative;
-        z-index:2;
-    }
+.title {
+   font-family: $font;
+   font-size: pxToRem(45);
+   line-height: pxToRem(45);
+   color: $gris;
+   position: relative;
+   display: inline-block;
+   font-weight: 800;
+   span {
+      position: relative;
+      z-index: 2;
+   }
 
+   &::before {
+      content: "";
+      width: 100%;
+      height: pxToRem(10);
+      background-color: $bleuMain;
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+   }
 
- &::before{
-     content:"";
-     width:100%;
-     height:pxToRem(10);
-     background-color:$bleuMain;
-     display: inline-block;
-     position: absolute;
-     bottom:0;
-     left:0;  
- }
+   &.-tiny {
+      font-size: pxToRem(36);
+      line-height: pxToRem(36);
+   }
 
- &.-tiny{
-    font-size:pxToRem(36);
-    line-height:pxToRem(36);
- }
+   &.-huge {
+      font-size: pxToRem(60);
+      line-height: pxToRem(70);
+      margin: 0px;
+      letter-spacing: 2px;
 
- &.-huge{
-     font-size:pxToRem(80);
-     line-height:pxToRem(70);
+      @include test-up {
+         font-size: pxToRem(50);
+         line-height: pxToRem(70);
+         margin: 0px;
+         letter-spacing: 2px;
+      }
 
-&::before{
-    height:15px;
-    }
- }
+      @include medium-up {
+         font-size: 2.75rem;
+         line-height: 3.375rem;
+      }
 
+      &::before {
+         height: 15px;
+         width: 50%;
+      }
+   }
 }
 
- .titleh3{
-    font-family:$font;
-    font-size:pxToRem(26);
-    line-height:pxToRem(26);
- }
+.titleh3 {
+   font-family: $font;
+   font-size: pxToRem(26);
+   line-height: pxToRem(26);
+}
 
- .body{
-    font-family:$font;
-    font-size:pxToRem(18);
-    line-height:pxToRem(18);
- }
-
-
+.body {
+   font-family: $font;
+   font-size: pxToRem(18);
+   line-height: pxToRem(18);
+}

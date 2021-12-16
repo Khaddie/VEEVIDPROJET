@@ -1,3 +1,5 @@
+
+
 //FOUNDATION
 @import "foundation/functions";
 @import "foundation/variable";
@@ -10,11 +12,18 @@
 @import "elements/buttons";
 @import "elements/title";
 @import "elements/bandeau";
+@import "elements/principal";
 
 //COMPONENTS
+@import "components/compte";
 @import "components/header";
 @import "components/footer";
 
+
+
 html {
     font-size: $rootFontSize + px;
+}
+* {
+    font-family: $font;
 }

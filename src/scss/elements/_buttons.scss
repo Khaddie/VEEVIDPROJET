@@ -1,124 +1,143 @@
 // <----------------------BOUTON TXT---------------------->//
 
-.button-txt{ //Principal
+.button-txt {
+    //Principal
     @include button-base;
     padding: pxToRem(16);
     font-size: $boutonFontSize + px;
     @include transition;
     @include button-a-main;
-    &:hover{ //Hover du principal
+    &:hover {
+        //Hover du principal
         @include button-secondary-base;
         color: $orange;
-        @include transition; 
+        @include transition;
         @include button-a-hover;
     }
-    &.-secondary{ //Secondaire
+    &.-secondary {
+        //Secondaire
         @include button-secondary-base;
         color: $gris;
         @include transition;
-        @include button-a-second; 
-        &:hover{ //Hover du secondaire
+        @include button-a-second;
+        &:hover {
+            //Hover du secondaire
             color: $orange;
             @include transition;
-            @include button-a-hover; 
+            @include button-a-hover;
         }
     }
 }
 
 // <----------------------BOUTON ICONE+TXT ---------------------->//
 
-.button-ico-txt{ //Principal
+.button-ico-txt {
+    //Principal
     @include button-base;
     padding: pxToRem(16);
     font-size: $boutonFontSize + px;
     @include transition;
     @include button-a-main;
-    svg{
+    svg {
         @include ico-button;
         padding-right: pxToRem(8);
-        path{
-            fill:white;
+        path {
+            fill: white;
         }
     }
-    &:hover{ //Hover
+    &:hover {
+        //Hover
         @include button-secondary-base;
         @include ico-hover;
         @include button-a-hover;
-        @include transition; 
+        @include transition;
     }
-    &.-secondary{ //Secondaire
+    &.-secondary {
+        //Secondaire
         @include button-secondary-base;
         color: $gris;
         @include transition;
-        @include button-a-second;  
-        svg{
+        @include button-a-second;
+        svg {
             @include ico-button;
             padding-right: pxToRem(8);
-            path{
+            path {
                 fill: $gris;
             }
         }
-        &:hover{ //Hover du secondaire
+        &:hover {
+            //Hover du secondaire
             @include button-secondary-base;
             @include ico-hover;
             @include transition;
-            @include button-a-hover; 
+            @include button-a-hover;
         }
     }
 }
 
 // <----------------------BOUTON TXT+FLECHE ---------------------->//
 
-.button-txt-arrow{
+.button-txt-arrow {
+    //Deux boutons accueil du dessus //
+    &.-present {
+        margin-right: pxToRem(100);
+        margin-top: pxToRem(10);
+        margin-bottom: pxToRem(15);
+        font-weight: 600;
+    }
+    //Fin des deux boutons accueil du dessus //
     @include button-base;
     padding: pxToRem(18) 0 pxToRem(18) pxToRem(18); //haut,droite,bas,gauche
     font-size: $boutonHomeFontSize + px;
     @include transition;
-    @include button-a-main; 
-    svg{
+    @include button-a-main;
+
+    svg {
         width: pxToRem(48);
         height: pxToRem(24);
         padding-left: pxToRem(8);
         display: inline-block;
         vertical-align: middle;
-        *{ // * = tous les éléments
-            fill:white;
+        * {
+            // * = tous les éléments
+            fill: white;
             transform-origin: left center; //La flèche grandit en partant de la gauche (son origine)
             @include transition;
         }
     }
-    &:hover{
+
+    &:hover {
         @include button-secondary-base;
         @include ico-hover;
         padding: pxToRem(18);
         @include transition;
         @include button-a-hover;
-        svg{
-            .barre{
+        svg {
+            .barre {
                 transform: scaleX(2.5); // par défaut : scaleX = 1
                 transition: transform 0.2s ease-in;
             }
-            .pointe{
+            .pointe {
                 transform: translateX(58%);
                 transition: transform 0.2s ease-in;
             }
         }
     }
-    &.-secondary{
+    &.-secondary {
         @include button-secondary-base;
-        @include transition; 
-        color:$gris;
-        @include button-a-second; 
-        svg{
-            *{
+        @include transition;
+        color: $gris;
+        @include button-a-second;
+        svg {
+            * {
                 fill: $gris;
             }
         }
-        &:hover{
+        &:hover {
             @include button-a-hover;
             color: $orange;
-            svg{
-                *{
+            svg {
+                * {
                     fill: $orange;
                 }
             }
@@ -128,26 +147,144 @@
 
 // <----------------------LIEN TRAIT+TXT---------------------->//
 
-.link{
+.link {
     @include link-base;
     color: $orange;
-    &:before{
+    &:before {
         @include link-trait-none;
         @include transition;
         background-color: $orange;
         margin-right: pxToRem(2);
     }
-    &:hover{
-        &:before{
+    &:hover {
+        &:before {
             width: pxToRem(20);
             height: pxToRem(1);
             @include transition;
         }
     }
-    &.-secondary{
-        color:$gris;
-        &:before{
+    &.-secondary {
+        color: $gris;
+        &:before {
             background-color: $gris;
         }
     }
 }
+
+// <----------------------Bouton fixe---------------------->//
+
+.button-fixed{
+    border-radius: 30px 0 0 0;
+    color: white;
+    font-family: $font;
+    border: solid 1px $orange;
+    background-color: $orange;
+    padding: pxToRem(16);
+    font-size: $boutonFontSize + px;
+    position: fixed; // le bouton sera fixe au scroll
+    top:50%;
+    right: 0;
+    transform: translateY(-50%); // sert à centrer l'élément
+    @include transition;
+    @include button-a-main;
+    display: block; // l'élément prend une ligne entière
+    svg{
+        @include ico-button;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: pxToRem(8);
+        path{
+            fill:white;
+        }
+    }
+    a{
+        display: block;
+    }
+    &:hover{
+        @include button-secondary-base;
+        color: $orange;
+        @include transition; 
+        @include button-a-hover;
+        @include ico-hover;
+    }
+}
+//////////////////////////////////////
+///////////// RESPONSIVE /////////////
+//////////////////////////////////////
+
+@media screen and (max-width: 1280px) { /* Règles CSS pour les écrans portables ici */
+    .button-txt{
+        font-size: $boutonFontSizeOP + px;
+    }
+
+    .button-ico-txt{
+        font-size: $boutonFontSizeOP + px;
+    }
+
+    .button-txt-arrow{
+        font-size: $boutonHomeFontSizeOP + px;
+    }
+
+    .button-fixed{
+        font-size: $boutonFontSizeOP + px;
+    }
+
+    .link{
+        font-size: $linkFontSizeOP + px;
+    }
+}
+
+@media screen and (max-width: 768px) { /* Règles CSS pour les tablettes ici */
+    .button-txt{
+        font-size: $boutonFontSizeT + px;
+        padding: pxToRem(14);
+    }
+
+    .button-ico-txt{
+        font-size: $boutonFontSizeT + px;
+        padding: pxToRem(14);
+    }
+
+    .button-txt-arrow{
+        font-size: $boutonHomeFontSizeT + px;
+        padding: pxToRem(16) 0 pxToRem(16) pxToRem(16);
+    }
+
+    .button-fixed{
+        font-size: $boutonFontSizeT + px;
+        padding: pxToRem(14);
+    }
+
+    .link{
+        font-size: $linkFontSizeT + px;
+    }
+}
+
+@media all and (max-device-width: 480px) /* Règles CSS pour les mobiles ici */
+{
+    .button-txt{
+        font-size: $boutonFontSizeM + px;
+        padding: pxToRem(16);
+    }
+
+    .button-ico-txt{
+        font-size: $boutonFontSizeM + px;
+        padding: pxToRem(16);
+    }
+
+    .button-txt-arrow{
+        font-size: $boutonHomeFontSizeM + px;
+        padding: pxToRem(18) 0 pxToRem(18) pxToRem(18);
+    }
+
+    .button-fixed{
+        font-size: $boutonFontSizeM + px;
+        padding: pxToRem(16);
+    }
+
+    .link{
+        font-size: $linkFontSizeM + px;
+    }
+}
+
