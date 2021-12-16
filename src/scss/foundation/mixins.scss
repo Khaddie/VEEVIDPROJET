@@ -61,34 +61,38 @@
     }
 }
 
-@mixin medium-up {
-    @media all and (min-width: 1279px) {
+@mixin test-up {
+    @media all and (min-width: 1279px) and (max-width: 1300px) {
         @content;
     }
 }
-@mixin small-up {
+@mixin medium-up {
+    @media all and (max-width: 1279px) {
+        @content;
+    }
+}
+@mixin big-up {
     @media all and (max-width: 1919px) {
         @content;
     }
 }
 //links
-@mixin link-base{
+@mixin link-base {
     font-size: $linkFontSize + px;
     text-decoration: none;
 }
 
 @mixin link-trait-none {
-    content : "";
+    content: "";
     display: inline-block;
     vertical-align: middle;
     width: 0;
     height: 0;
 }
 
-
 // <----------------------styles bandeau---------------------->//
-@mixin small-up-section(){
-    text-align: center; 
+@mixin small-up-section() {
+    text-align: center;
     background: white;
     width: 257px;
     border: 5px solid $bleuMain;
@@ -96,5 +100,5 @@
     margin: auto;
     margin-right: 75px;
     padding: 10px 28px;
-    line-height: 0.5;           
-  }
+    line-height: 0.5;
+}
