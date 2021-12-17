@@ -190,3 +190,64 @@ vansprix.forEach(function(valeur){
     chaussure.elements.lacets = "violet"
     console.log("La chaussure de la marque : " + chaussure.marque + " et Modèle " + chaussure.titre + "COuleur : " + chaussure.elements.lacets);
 })
+
+
+//
+const axios = require('axios');
+
+//import axios from 'axios';
+
+    axios.get("http://localhost/tagliatelle/wp-json/wp/v2/chaussures")
+
+        .then(function (reponse) {
+            console.log(reponse)
+            let chaussures = reponse.data
+            
+            chaussures.forEach(function (chaussure) {
+                console.log(chaussure) //chaque chaussure
+                console.log("ID chaussure : ", chaussure.id)
+                console.log("Titre chaussure : ", chaussure.title.rendered)
+
+                let marques = chaussure.marque_chaussures
+                marques.forEach(function (marque) {
+                    console.log("Marque chaussure : ", marque)
+                    getMarque(marque);
+                })
+            })
+
+           
+        })
+
+        function getMarque(id){
+            axios.get("http://localhost/tagliatelle/wp-json/wp/v2/marque_chaussures/" + id)
+            .then (function (reponse){
+                let marque = reponse.data
+                console.log("nom", marque.name)
+            })
+
+            .catch (function(erreur){
+                console.log(erreur)
+            })
+        }
+
+        function getChaussure(id){
+            axios.get("http://localhost/tagliatelle/wp-json/wp/v2/chaussures/" + id)
+            .then (function (reponse){
+                console.log(reponse.data)
+
+                let maChaussure = reponse.data
+                console.log(maChaussure)
+
+                let marque = reponse.data
+                console.log("nom", marque.name)
+
+                let lacets = maChaussure.acf.lacets
+                lacets.forEach(function(lacet){
+                console.log("couleur du lacet: ", lacet["lacets-couleurs"])
+                })
+            })
+
+        }
+
+        getChaussure(36)
+       
