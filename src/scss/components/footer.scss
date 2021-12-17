@@ -1,7 +1,7 @@
 footer {
     .footer {
         &__menu {
-            @include small-up {
+            @include small-down() {
                 display: flex;
                 flex-direction: column;
                 text-align: left;
@@ -31,15 +31,13 @@ footer {
             flex-direction: row;
             justify-content: center;
 
-            .trait {
+            /* .trait {
                 @include small-up {
                     height: 1px;
-                    width: 50%;
-                    margin: 12px auto;
-                    background-color: $orange;
+                   
                     display: block;
                 }
-            }
+            }*/
             ul:first-child {
                 margin-right: 3%;
             }
@@ -50,7 +48,7 @@ footer {
                 li:first-child {
                     font-weight: 800;
                     margin-top: 0px;
-                    @include small-up {
+                    @include small-down() {
                         text-transform: uppercase;
                     }
                 }
@@ -74,21 +72,23 @@ footer {
 
             img {
                 width: 50%;
-                @include small-up {
+                @include small-down() {
                     width: 100%;
                 }
             }
             .center {
-                @include small-up {
+                @include small-down() {
                     text-align: center;
+                    border-top: 0.1rem solid $orange;
+                    padding-top: pxToRem(15);
                 }
             }
         }
         &__infos {
             text-align: center;
-            font-size: pxToRem(14);
+            font-size: pxToRem(12);
 
-            @include small-up {
+            @include small-down() {
                 font-size: pxToRem(8);
                 .copyright {
                     font-weight: bold;
