@@ -13,7 +13,7 @@ body {
     &__logo {
         margin-left: pxToRem(78);
         width: 15%;
-        @include medium-up() {
+        @include medium-only() {
             width: 12%;
             margin-left: pxToRem(20);
         }
@@ -27,7 +27,7 @@ body {
         font-weight: bold;
         justify-content: space-between;
         align-items: center;
-        @include medium-up() {
+        @include medium-only() {
             margin: 0.875rem;
         }
     }
@@ -35,7 +35,7 @@ body {
     li {
         margin: pxToRem(18);
 
-        @include medium-up() {
+        @include medium-only() {
             margin: 0.7rem;
         }
     }

@@ -6,7 +6,7 @@
     border: solid 1px $orange;
     background-color: $orange;
 }
- 
+
 @mixin button-secondary-base {
     background-color: white;
     border: solid 1px $orange;
@@ -55,27 +55,6 @@
 }
 
 //MEDIA QUERIES//
-@mixin small-up {
-    @media all and (max-width: 767px) {
-        @content;
-    }
-}
-
-@mixin test-up {
-    @media all and (min-width: 1279px) and (max-width: 1300px) {
-        @content;
-    }
-}
-@mixin medium-up {
-    @media all and (max-width: 1279px) {
-        @content;
-    }
-}
-@mixin big-up {
-    @media all and (max-width: 1919px) {
-        @content;
-    }
-}
 
 //links
 @mixin link-base {
@@ -106,60 +85,59 @@
 
 // <----------------------GRILLE---------------------->//
 
-$small : 460px;
-$medium : 640px;
-$large : 960px;
-$x-large : 1200px;
+$small: 460px;
+$medium: 640px;
+$large: 960px;
+$x-large: 1200px;
 
-
-@mixin x-small-only(){
-  @media screen and (max-width : ($small - 1)){
-      @content;
-  } 
+@mixin x-small-only() {
+    @media screen and (max-width: ($small - 1)) {
+        @content;
+    }
 }
 
-@mixin small-down(){
-  @media screen and (max-width : ($medium - 1)){
-      @content;
-  } 
+@mixin small-down() {
+    @media screen and (max-width: ($medium - 1)) {
+        @content;
+    }
 }
-@mixin small-up(){
-  @media screen and (min-width : $small){
-      @content;
-  } 
+@mixin small-up() {
+    @media screen and (min-width: $small) {
+        @content;
+    }
 }
-@mixin small-only(){
-  @media screen and (min-width : $small) and (max-width : ($medium - 1)){
-      @content;
-  } 
-}
-
-@mixin medium-up(){
-  @media screen and (min-width : $medium){
-      @content;
-  } 
+@mixin small-only() {
+    @media screen and (min-width: $small) and (max-width: ($medium - 1)) {
+        @content;
+    }
 }
 
-@mixin medium-only(){
-  @media screen and (min-width : $medium) and (min-width : ($large - 1)){
-      @content;
-  } 
+@mixin medium-up() {
+    @media screen and (min-width: $medium) {
+        @content;
+    }
 }
 
-@mixin large-up(){
-  @media screen and (min-width : $large){
-      @content;
-  } 
+@mixin medium-only() {
+    @media screen and (min-width: $medium) and (min-width: ($large - 1)) {
+        @content;
+    }
 }
 
-@mixin large-only(){
-  @media screen and (min-width : $large) and (max-width : ($x-large - 1)){
-      @content;
-  } 
+@mixin large-up() {
+    @media screen and (min-width: $large) {
+        @content;
+    }
 }
 
-@mixin x-large-up(){
-  @media screen and (min-width : $x-large){
-      @content;
-  } 
+@mixin large-only() {
+    @media screen and (min-width: $large) and (max-width: ($x-large - 1)) {
+        @content;
+    }
+}
+
+@mixin x-large-up() {
+    @media screen and (min-width: $x-large) {
+        @content;
+    }
 }
