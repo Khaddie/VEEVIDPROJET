@@ -1,63 +1,56 @@
 @use "sass:math";
 
-$maxColumns : 12;
+$maxColumns: 12;
 
-.container{
+.container {
     max-width: 1200px;
-    margin : 0 auto;
-
+    margin: 0 auto;
 }
 
-.row{
-    display : flex;
+.row {
+    display: flex;
     flex-wrap: wrap;
-    &.-center{
-      justify-content:center;
+    &.-center {
+        justify-content: center;
     }
-    &.-center-step{
-        justify-content:center;
+    &.-center-step {
+        justify-content: center;
         background-color: $beige;
         margin: pxToRem(80) auto;
-      }
-    &.-vcenter{
+    }
+    &.-vcenter {
         align-items: center;
     }
-
 }
 
-
- 
-
-@for $i from 1 through $maxColumns{
-    .col-#{$i}{
-        flex-basis : calculate-width($i);
+@for $i from 1 through $maxColumns {
+    .col-#{$i} {
+        flex-basis: calculate-width($i);
         max-width: calculate-width($i);
     }
-    
 }
 
-@include medium-up(){
-    @for $i from 1 through $maxColumns{
-        .col-md-#{$i}{
-            flex-basis : calculate-width($i);
-            max-width: calculate-width($i);
-        }
-       
-    }
-}
-
-@include large-up(){
-    @for $i from 1 through $maxColumns{
-        .col-l-#{$i}{
-            flex-basis : calculate-width($i);
+@include medium-up() {
+    @for $i from 1 through $maxColumns {
+        .col-md-#{$i} {
+            flex-basis: calculate-width($i);
             max-width: calculate-width($i);
         }
     }
 }
-@include x-large-up(){
-    @for $i from 1 through $maxColumns{
-        .col-xl-#{$i}{
-            flex-basis : calculate-width($i);
+
+@include large-up() {
+    @for $i from 1 through $maxColumns {
+        .col-l-#{$i} {
+            flex-basis: calculate-width($i);
+            max-width: calculate-width($i);
+        }
+    }
+}
+@include x-large-up() {
+    @for $i from 1 through $maxColumns {
+        .col-xl-#{$i} {
+            flex-basis: calculate-width($i);
             max-width: calculate-width($i);
         }
     }

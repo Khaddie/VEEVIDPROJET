@@ -25,12 +25,12 @@
             display: inline-block;
             position: absolute;
             z-index: -1;
-            bottom: 0;
+            bottom: 8%;
             right: 0;
         }
 
         img {
-            width: 100%;
+            width: 90%;
             align-self: center;
         }
     }
@@ -50,5 +50,12 @@
 //PARTIE BOITE DE CHAUSSURES
 
 .c-box {
-    width: 100vv;
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+    &__cadeau {
+        img {
+            width: 30%;
+        }
+    }
 }
